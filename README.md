@@ -1,2 +1,3 @@
-# Antagonist-Attack
-Game
+Antagonist Attack
+
+Run "Start.py" to start!
