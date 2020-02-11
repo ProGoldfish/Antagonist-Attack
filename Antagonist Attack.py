@@ -49,4 +49,4 @@ while done == "n":
 
 save(username,seed,savedata,maxhp,playerhp,attackmax,attackmin,armour)
 
-os.startfile("Antagonist Attack.py")
+os.startfile("Main.py")
