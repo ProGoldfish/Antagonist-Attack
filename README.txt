@@ -1,3 +1,3 @@
 Antagonist Attack
 
-Run "Click to Start.py" to start!
+Run "Antagonist Attack.py" to start!
