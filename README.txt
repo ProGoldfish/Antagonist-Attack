@@ -1,3 +1,11 @@
 Antagonist Attack
+A game by team jake and co.
+
+team jake and co. members:
+	Jake, CEO of team jake and co.
+	Marketing Division, head of Marketing Division of team jake and co.
+	Jordan, programs
+	Robby, programs
+	Ethan, he comes up with slogans
 
 Run "Antagonist Attack.py" to start!
