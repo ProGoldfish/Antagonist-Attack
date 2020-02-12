@@ -23,4 +23,13 @@ while len(username) < 1 or len(username) > 8 or any(ext in username for ext in [
 	username = input("Enter your username: (no numbers or spaces)\n> ").capitalize()
 
 read(username)
-save(username, seed, savedata, playerhp)
+#save(username, seed, savedata, playerhp) #EXAMPLE OF HOW TO SAVE
+
+if savedata[0] == "1":
+	winsound.PlaySound("Sounds/arrow.wav", winsound.SND_ASYNC)
+if savedata[0] == "2":
+	winsound.PlaySound("Sounds/swords.wav", winsound.SND_ASYNC)
+if savedata[0] == "3":
+	winsound.PlaySound("Sounds/spell.wav", winsound.SND_ASYNC)
+
+input("end")
