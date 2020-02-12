@@ -11,12 +11,20 @@ def read(username):
 	file.close()
 	seed = data[0]
 	seed = seed.replace("\n","")
+	seed = seed.replace("[","")
+	seed = seed.replace("]","")
+	seed = seed.replace(",","")
+	seed = seed.replace(" ","")
+	list(seed)
 	savedata = data[1]
 	savedata = savedata.replace("\n","")
+	savedata = savedata.replace("[","")
+	savedata = savedata.replace("]","")
+	savedata = savedata.replace(",","")
+	savedata = savedata.replace(" ","")
+	list(savedata)
 	playerhp = data[2]
 	playerhp = playerhp.replace("\n","")
-
-winsound.PlaySound("Sounds/swords.wav", winsound.SND_ASYNC)
 
 username = ""
 while len(username) < 1 or len(username) > 8 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
