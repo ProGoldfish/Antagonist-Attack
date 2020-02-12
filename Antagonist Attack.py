@@ -4,7 +4,7 @@ seed = []
 savedata = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 username = ""
 
-#EXAMPLES OF HOW TO PLAY SOUND
+#EXAMPLES OF HOW TO PLAY SOUNDS
 #winsound.Beep(1000, 100) #plays a beep. 1st arguement is hz and second is ms
 #winsound.PlaySound("Sounds/test.wav", winsound.SND_FILENAME) #waits until the sound has finished playing to continue
 winsound.PlaySound("Sounds/test2.wav", winsound.SND_ASYNC) #continues the program while the sound is playing
