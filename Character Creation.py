@@ -1,5 +1,5 @@
 import random, winsound, os
-from save import save
+from Save import save
 seed = []
 savedata = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 username = ""
