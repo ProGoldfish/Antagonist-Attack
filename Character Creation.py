@@ -2,6 +2,8 @@ import random, winsound, os
 from Save import save
 seed = []
 savedata = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+
 username = ""
 
 #EXAMPLES OF HOW TO PLAY SOUNDS
@@ -14,7 +16,7 @@ for i in range(200):
 
 done = "n"
 while done == "n":
-    while len(username) < 1 or len(username) > 8 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
+    while len(username) < 1 or len(username) > 15 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
         username = input("Please enter a username that you will remember: (no numbers or spaces)\n> ").capitalize()
 
     while savedata[0] not in ["1","2","3"]:

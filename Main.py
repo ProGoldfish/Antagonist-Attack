@@ -34,10 +34,15 @@ read(username)
 #save(username, seed, savedata, playerhp) #EXAMPLE OF HOW TO SAVE
 
 if savedata[0] == "1":
+	playerclass = "Archer"
 	winsound.PlaySound("Sounds/arrow.wav", winsound.SND_ASYNC)
 if savedata[0] == "2":
+	playerclass = "Warrior"
 	winsound.PlaySound("Sounds/swords.wav", winsound.SND_ASYNC)
 if savedata[0] == "3":
+	playerclass = "Alchemist"
 	winsound.PlaySound("Sounds/spell.wav", winsound.SND_ASYNC)
 
-input("end")
+print("Welcome "+ username+ ".. My finest "+ playerclass+ "!")
+
+input("end") #stops program from ending instantly
