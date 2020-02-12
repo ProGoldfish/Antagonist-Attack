@@ -20,3 +20,4 @@ while len(username) < 1 or len(username) > 8 or any(ext in username for ext in [
 	username = input("Enter your username: (no numbers or spaces)\n> ").capitalize()
 
 read(username)
+save(username, seed, savedata, playerhp)
