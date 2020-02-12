@@ -1,6 +1,5 @@
 import winsound
 from Save import Save
-from Character import Character, Enemy
 
 def Read(username):
 	global seed
