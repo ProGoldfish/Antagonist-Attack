@@ -49,5 +49,4 @@ while done == "n":
         username = ""
 
 save(username,seed,savedata,playerhp)
-winsound.PlaySound("Sounds/ph.wav", winsound.SND_FILENAME)
 os.startfile("Main.py")
