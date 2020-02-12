@@ -1,4 +1,4 @@
-import random, winsound, os
+import winsound
 from save import save
 
 input()
