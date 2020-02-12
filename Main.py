@@ -10,10 +10,13 @@ def read(username):
 	data = file.readlines()
 	file.close()
 	seed = data[0]
+	seed = seed.replace("\n","")
 	savedata = data[1]
+	savedata = savedata.replace("\n","")
 	playerhp = data[2]
+	playerhp = playerhp.replace("\n","")
 
-winsound.PlaySound("Sounds/ph.wav", winsound.SND_ASYNC)
+winsound.PlaySound("Sounds/swords.wav", winsound.SND_ASYNC)
 
 username = ""
 while len(username) < 1 or len(username) > 8 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
