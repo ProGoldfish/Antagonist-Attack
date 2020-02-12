@@ -6,8 +6,8 @@ username = ""
 
 #EXAMPLES OF HOW TO PLAY SOUNDS
 #winsound.Beep(1000, 100) #plays a beep. 1st arguement is hz and second is ms
-#winsound.PlaySound("Sounds/test.wav", winsound.SND_FILENAME) #waits until the sound has finished playing to continue
-winsound.PlaySound("Sounds/test2.wav", winsound.SND_ASYNC) #continues the program while the sound is playing.. this one will be used the most
+#winsound.PlaySound("Sounds/filename.wav", winsound.SND_FILENAME) #waits until the sound has finished playing to continue
+winsound.PlaySound("Sounds/Character Creation.wav", winsound.SND_ASYNC) #continues the program while the sound is playing.. this one will be used the most
 
 for i in range(200):
     seed.append(random.randint(0,9))
