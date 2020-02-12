@@ -43,6 +43,6 @@ if savedata[0] == "3":
 	playerclass = "Alchemist"
 	winsound.PlaySound("Sounds/spell.wav", winsound.SND_ASYNC)
 
-print("Welcome "+ username+ ".. My finest "+ playerclass+ "!")
+print("Welcome "+ username+ "... My finest "+ playerclass+ "!")
 
 input("end") #stops program from ending instantly
