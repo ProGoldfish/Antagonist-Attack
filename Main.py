@@ -109,7 +109,6 @@ def Town():
     global playerclass
     global username
     Save()
-    Sound("walk")
     NewPage()
     location = ""
     print("You are welcomed back into the humbling town.\nThe towns workers are greeting you with wonderful smiles.\n")
@@ -153,9 +152,11 @@ def Menu():
         playerinput = input("What would you like to do now my mighty "+ playerclass+ "?\n(a \"dungeon\", back to the \"town\" or \"quit\" the game)\n> ").lower()
     if playerinput == "dungeon":
         playerinput = ""
+        Sound("walk")
         Dungeon()
     if playerinput == "town":
         playerinput = ""
+        Sound("walk")
         Town()
     if playerinput == "quit":
         playerinput = ""
@@ -171,7 +172,6 @@ def Dungeon():
     global attackmin
     global armour
     Save()
-    Sound("walk")
     NewPage()
     input("dungeon\n> ") #robby
 
