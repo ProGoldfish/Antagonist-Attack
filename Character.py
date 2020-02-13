@@ -32,10 +32,10 @@ class Enemy(Character):
 
     def __init__(self, char_name, char_description):
 
-    super().__init__(char_name, char_description)
-    self.weakness = None 
+        super().__init__(char_name, char_description)
+        self.weakness = None 
 
-    # Fight with an enemy
+        # Fight with an enemy
     def fight(self, combat_item):
         if combat_item == self.weakness:
             print("You fend " + self.name + " off with the " + combat_item)
