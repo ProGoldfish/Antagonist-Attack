@@ -8,7 +8,7 @@ def NewPage():
 
 username = ""
 
-winsound.PlaySound("Sounds/careless.wav", winsound.SND_ASYNC)
+winsound.PlaySound("Sounds/careless.wav", winsound.SND_LOOP + winsound.SND_ASYNC)
 
 for i in range(200):
     seed.append(random.randint(0,9))
