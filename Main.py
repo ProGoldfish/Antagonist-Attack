@@ -1,4 +1,4 @@
-import winsound
+import winsound, time, random
 from Save import Save
 from Room import Room
 from Character import Character, Enemy, Friend
@@ -27,11 +27,64 @@ def Read(username):
 	playerhp = playerhp.replace("\n","")
 	return seed, savedata, playerhp
 
-def lobby():
+def TitleScreen():
+	print("                                              .-'''-.                                ")
+	time.sleep(0.05)
+	print("                                             '   _    \\                              ")
+	time.sleep(0.05)
+	print("            _..._                          /   /` '.   \\   _..._  .--.               ")
+	time.sleep(0.05)
+	print("          .'     '.                  .--./.   |     \\  ' .'     '.|__|               ")
+	time.sleep(0.05)
+	print("         .   .-.   .    .|          /.''\\\\|   '      |  .   .-.   .--.          .|   ")
+	time.sleep(0.05)
+	print("    __   |  '   '  |  .' |_    __  | |  | \\    \\     / /|  '   '  |  |        .' |_  ")
+	time.sleep(0.05)
+	print(" .:--.'. |  |   |  |.'     |.:--.'. \\`-' / `.   ` ..' / |  |   |  |  |    _ .'     | ")
+	time.sleep(0.05)
+	print("/ |   \\ ||  |   |  '--.  .-/ |   \\ |/(\"'`     '-...-'`  |  |   |  |  |  .' '--.  .-' ")
+	time.sleep(0.05)
+	print("`\" __ | ||  |   |  |  |  | `\" __ | |\\ '---.             |  |   |  |  | .   | /|  |   ")
+	time.sleep(0.05)
+	print(" .'.''| ||  |   |  |  |  |  .'.''| | /'\"\"'.\\            |  |   |  |__.'.'| |//|  |   ")
+	time.sleep(0.05)
+	print("/ /   | ||  |   |  |  |  './ /   | |||     ||           |  |   |  |.'.'.-'  / |  '.' ")
+	time.sleep(0.05)
+	print("\\ \\._,\\ '|  |   |  |  |   /\\ \\._,\\ '\\'. __//            |  |   |  |.'   \\_.'  |   /  ")
+	time.sleep(0.05)
+	print(" `--'  `\"'--'   '--'  `'-'  `--'  `\" `'_..._            '--'  ___-'           `'-'   ")
+	time.sleep(0.05)
+	print("                                    .-'_..._''.            .'/   \\                   ")
+	time.sleep(0.05)
+	print("                                  .' .'      '.\\   .      / /     \\                  ")
+	time.sleep(0.05)
+	print("                                 / .'            .'|      | |     |                  ")
+	time.sleep(0.05)
+	print("             .|      .|         . '            .'  |      | |     |                  ")
+	time.sleep(0.05)
+	print("    __     .' |_   .' |_    __  | |           <    |      |/`.   .'                  ")
+	time.sleep(0.05)
+	print(" .:--.'. .'     |.'     |.:--.'.| |            |   | ____  `.|   |                   ")
+	time.sleep(0.05)
+	print("/ |   \\ '--.  .-'--.  .-/ |   \\ . '            |   | \\ .'   ||___|                   ")
+	time.sleep(0.05)
+	print("`\" __ | |  |  |    |  | `\" __ | |\\ '.          |   |/  .    |/___/                   ")
+	time.sleep(0.05)
+	print(" .'.''| |  |  |    |  |  .'.''| | '. `._____.-'|    /\\  \\   .'.--.                   ")
+	time.sleep(0.05)
+	print("/ /   | |_ |  '.'  |  './ /   | |_  `-.______ /|   |  \\  \\ | |    |                  ")
+	time.sleep(0.05)
+	print("\\ \\._,\\ '/ |   /   |   /\\ \\._,\\ '/           ` '    \\  \\  \\_\\     /                 ")
+	time.sleep(0.05)
+	print(" `--'  `\"  `'-'    `'-'  `--'  `\"             '------'  '---`''--'                   ")
+	time.sleep(0.05)
+
+def Lobby():
         global playerclass
         global username
         print("You are welcomed back into the ")
 
+TitleScreen()
 username = ""
 while len(username) < 1 or len(username) > 8 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
 	username = input("Enter your username: (no numbers or spaces - usernames are not case sensitive)\n> ").capitalize()
@@ -50,6 +103,6 @@ if savedata[0] == "3":
 	winsound.PlaySound("Sounds/spell.wav", winsound.SND_ASYNC)
 print("Welcome "+ username+ "... My finest "+ playerclass+ "!\nIf you need a list of commands try typing ""Help"" at any point.\n")
 
-lobby()
+Lobby()
 
 input("end") #stops program from ending instantly
