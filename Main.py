@@ -165,7 +165,6 @@ seed, savedata, playerhp = Read(username)
 if savedata[0] == "1":
     playerclass = "Archer"
     maxhp = 100
-    playerhp = 100
     attackmax = 25
     attackmin = 20
     armour = 1
@@ -173,7 +172,6 @@ if savedata[0] == "1":
 if savedata[0] == "2":
     playerclass = "Warrior"
     maxhp = 125
-    playerhp = 125
     attackmax = 20
     attackmin = 15
     armour = 1.25
@@ -181,7 +179,6 @@ if savedata[0] == "2":
 if savedata[0] == "3":
     playerclass = "Alchemist"
     maxhp = 75
-    playerhp = 75
     attackmax = 15
     attackmin = 10
     armour = 0.9
