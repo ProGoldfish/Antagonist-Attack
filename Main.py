@@ -35,6 +35,8 @@ def Save():
     SaveData(username, seed, savedata, playerhp)
 
 def Sound(sound):
+    if sound == "walk":
+        sound = sound + str(random.randint(1,2))
     sound = "Sounds/"+ sound+ ".wav"
     winsound.PlaySound(sound, winsound.SND_ASYNC)
 
@@ -117,18 +119,21 @@ def Town():
             NewPage()
             if location == "blacksmith":
                     location = ""
+                    Sound("smithy")
                     input("blacksmith\n> ") #robby
 
                     Save()
                     NewPage()
             if location == "merchant":
                     location = ""
+                    Sound("mark")
                     input("merchant\n> ") #robby
 
                     Save()
                     NewPage()
             if location == "armourer":
                     location = ""
+                    Sound("roary")
                     input("armourer\n> ") #robby
 
                     Save()
