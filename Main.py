@@ -28,6 +28,7 @@ def Read(username):
 	return seed, savedata, playerhp
 
 def TitleScreen():
+        winsound.PlaySound("Sounds/startup.wav", winsound.SND_ASYNC)
 	print("                                              .-'''-.                                ")
 	time.sleep(0.05)
 	print("                                             '   _    \\                              ")
@@ -82,7 +83,15 @@ def TitleScreen():
 def Lobby():
         global playerclass
         global username
-        print("You are welcomed back into the ")
+        location = ""
+        while location not in ["blacksmith","store","armoury","help"]:
+                location = input("You are welcomed back into the humbling town, the towns workers are greeting you with wonderful smiles, the Blacksmith(blacksmith), Merchant(store), Armourer(armoury)\n> ").lower()
+        if location == "blacksmith":
+        if location == "store":
+        if location == "armoruy":
+        if location == "help":
+                input("Here you can explore and upgrade your utility within the local town. The blacksmith is for Upgrading weapons, store if for buying consumables, whilst armoury is for buying new weapons of higher tier") 
+                
 
 TitleScreen()
 username = ""
