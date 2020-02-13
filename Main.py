@@ -5,9 +5,6 @@ from Character import Character, Enemy, Friend
 from Item import Item
 
 def Read(username):
-	global seed
-	global savedata
-	global playerhp
 	filename = "Save Files/"+ username+ ".txt"
 	file = open(filename, "r")
 	data = file.readlines()
@@ -28,12 +25,18 @@ def Read(username):
 	list(savedata)
 	playerhp = data[2]
 	playerhp = playerhp.replace("\n","")
+	return seed, savedata, playerhp
+
+def lobby():
+        global playerclass
+        global username
+        print("You are welcomed back into the ")
 
 username = ""
 while len(username) < 1 or len(username) > 8 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
 	username = input("Enter your username: (no numbers or spaces - usernames are not case sensitive)\n> ").capitalize()
 
-Read(username)
+seed, savedata, playerhp = Read(username)
 #Save(username, seed, savedata, playerhp) #EXAMPLE OF HOW TO SAVE
 
 if savedata[0] == "1":
@@ -45,7 +48,8 @@ if savedata[0] == "2":
 if savedata[0] == "3":
 	playerclass = "Alchemist"
 	winsound.PlaySound("Sounds/spell.wav", winsound.SND_ASYNC)
+print("Welcome "+ username+ "... My finest "+ playerclass+ "!\nIf you need a list of commands try typing ""Help"" at any point.\n")
 
-print("Welcome "+ username+ "... My finest "+ playerclass+ "!")
+lobby()
 
 input("end") #stops program from ending instantly
