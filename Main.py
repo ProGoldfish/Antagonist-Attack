@@ -34,6 +34,10 @@ def Save():
     global playerhp
     SaveData(username, seed, savedata, playerhp)
 
+def Sound(sound):
+    sound = "Sounds/"+ sound+ ".wav"
+    winsound.PlaySound(sound, winsound.SND_ASYNC)
+
 def PlayerSound():
     global playerclass
     if playerclass == "Archer":
@@ -47,7 +51,7 @@ def NewPage():
 	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 
 def TitleScreen():
-    winsound.PlaySound("Sounds/startup.wav", winsound.SND_ASYNC)
+    Sound("startup")
     print("                                              .-'''-.                                ")
     time.sleep(0.05)
     print("                                             '   _    \\                              ")
@@ -103,6 +107,7 @@ def Town():
     global playerclass
     global username
     Save()
+    Sound("walk")
     NewPage()
     location = ""
     print("You are welcomed back into the humbling town.\nThe towns workers are greeting you with wonderful smiles.\n")
@@ -136,6 +141,7 @@ def Town():
 
 def Menu():
     Save()
+    Sound("walk")
     playerinput = ""
     while playerinput not in ["dungeon","town","quit"]:
         NewPage()
@@ -160,6 +166,7 @@ def Dungeon():
     global attackmin
     global armour
     Save()
+    Sound("walk")
     NewPage()
     input("dungeon\n> ") #robby
 
@@ -167,7 +174,7 @@ def Dungeon():
 
 TitleScreen()
 username = ""
-while len(username) < 1 or len(username) > 8 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
+while len(username) < 1 or len(username) > 15 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
     username = input("Enter your username: (no numbers or spaces - usernames are not case sensitive)\n> ").capitalize()
 
 seed, savedata, playerhp = Read(username)
