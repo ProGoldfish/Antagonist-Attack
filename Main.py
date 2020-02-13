@@ -153,11 +153,15 @@ def Dungeon():
     global username
     global seed
     global savedata
-    global playerhp
     global playerclass
+    global maxhp
+    global playerhp
+    global attackmax
+    global attackmin
+    global armour
     Save()
     NewPage()
-    input("dungeon\n> ") #robby. you may have to global all the stat variables
+    input("dungeon\n> ") #robby
 
     Menu()
 
