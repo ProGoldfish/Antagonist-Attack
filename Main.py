@@ -1,5 +1,5 @@
 import winsound, time, random
-from Save import Save
+from Save import SaveData
 from Room import Room
 from Character import Character, Enemy, Friend
 from Item import Item
@@ -26,6 +26,13 @@ def Read(username):
     playerhp = data[2]
     playerhp = playerhp.replace("\n","")
     return seed, savedata, playerhp
+
+def Save():
+    global username
+    global seed
+    global savedata
+    global playerhp
+    SaveData(username, seed, savedata, playerhp)
 
 def PlayerSound():
     global playerclass
@@ -135,6 +142,11 @@ def Menu():
         playerinput = ""
 
 def Dungeon():
+    global username
+    global seed
+    global savedata
+    global playerhp
+    global playerclass
     NewPage()
     input("dungeon\n> ") #robby put the dungeon code here pls. you may have to global all the stat variables
 
@@ -146,7 +158,6 @@ while len(username) < 1 or len(username) > 8 or any(ext in username for ext in [
     username = input("Enter your username: (no numbers or spaces - usernames are not case sensitive)\n> ").capitalize()
 
 seed, savedata, playerhp = Read(username)
-#Save(username, seed, savedata, playerhp) #EXAMPLE OF HOW TO SAVE
 
 if savedata[0] == "1":
     playerclass = "Archer"

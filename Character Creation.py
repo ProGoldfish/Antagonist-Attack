@@ -1,5 +1,5 @@
 import random, winsound, os
-from Save import Save
+from Save import SaveData
 seed = []
 savedata = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
@@ -36,5 +36,5 @@ while done == "n":
         savedata[0] = 0
         username = ""
 
-Save(username, seed, savedata, 0)
+SaveData(username, seed, savedata, 0)
 os.startfile("Main.py")
