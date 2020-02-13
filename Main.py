@@ -113,14 +113,17 @@ def Town():
             if location == "blacksmith":
                     location = ""
                     input("blacksmith\n >")
+                    Save()
                     NewPage()
             if location == "merchant":
                     location = ""
                     input("merchant\n >")
+                    Save()
                     NewPage()
             if location == "armourer":
                     location = ""
                     input("armourer\n >")
+                    Save()
                     NewPage()
             if location == "help":
                     location = ""
