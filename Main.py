@@ -108,23 +108,23 @@ def Town():
     print("You are welcomed back into the humbling town.\nThe towns workers are greeting you with wonderful smiles.\n")
     while location != "leave":
         while location not in ["blacksmith","merchant","armourer","help","leave"]:
-            location = input("The Blacksmith (\"blacksmith\"), Merchant (\"merchant\") and Armourer (\"armourer\") are here. (type \"leave\" to leave)\n> ").lower()
+            location = input("The \"blacksmith\", \"merchant\" and \"armourer\" are here. (type \"leave\" to leave)\n> ").lower()
             NewPage()
             if location == "blacksmith":
                     location = ""
-                    input("blacksmith\n >") #robby
+                    input("blacksmith\n> ") #robby
 
                     Save()
                     NewPage()
             if location == "merchant":
                     location = ""
-                    input("merchant\n >") #robby
+                    input("merchant\n> ") #robby
 
                     Save()
                     NewPage()
             if location == "armourer":
                     location = ""
-                    input("armourer\n >") #robby
+                    input("armourer\n> ") #robby
 
                     Save()
                     NewPage()
@@ -139,7 +139,7 @@ def Menu():
     playerinput = ""
     while playerinput not in ["dungeon","town","quit"]:
         NewPage()
-        playerinput = input("What would you like to do now my mighty "+ playerclass+ "?\n(A \"dungeon\", back to the \"town\" or \"quit\" the game)\n> ").lower()
+        playerinput = input("What would you like to do now my mighty "+ playerclass+ "?\n(a \"dungeon\", back to the \"town\" or \"quit\" the game)\n> ").lower()
     if playerinput == "dungeon":
         playerinput = ""
         Dungeon()
