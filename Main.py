@@ -102,6 +102,7 @@ def TitleScreen():
 def Town():
     global playerclass
     global username
+    Save()
     NewPage()
     location = ""
     print("You are welcomed back into the humbling town.\nThe towns workers are greeting you with wonderful smiles.\n")
@@ -128,6 +129,7 @@ def Town():
     Menu()
 
 def Menu():
+    Save()
     playerinput = ""
     while playerinput not in ["dungeon","town","quit"]:
         NewPage()
@@ -147,6 +149,7 @@ def Dungeon():
     global savedata
     global playerhp
     global playerclass
+    Save()
     NewPage()
     input("dungeon\n> ") #robby put the dungeon code here pls. you may have to global all the stat variables
 
