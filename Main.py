@@ -1,5 +1,8 @@
 import winsound
 from Save import Save
+from Room import Room
+from Character import Character, Enemy, Friend
+from Item import Item
 
 def Read(username):
 	global seed

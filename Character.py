@@ -1,5 +1,4 @@
 class Character():
-
     # Create a character
     def __init__(self, char_name, char_description):
         self.name = char_name
