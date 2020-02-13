@@ -84,17 +84,16 @@ def Lobby():
         global playerclass
         global username
         location = ""
-        while location not in ["blacksmith","store","armoury","help"]:
-                location = input("You are welcomed back into the humbling town, the towns workers are greeting you with wonderful smiles, the Blacksmith(blacksmith), Merchant(store), Armourer(armoury)\n> ").lower()
+        while location not in ["blacksmith","merchant","armourer","help"]:
+                location = input("You are welcomed back into the humbling town.\nThe towns workers are greeting you with wonderful smiles.\nThe Blacksmith (\"blacksmith\"), Merchant (\"merchant\") and Armourer (\"armourer\") are here.\n> ").lower()
         if location == "blacksmith":
                 input("")
-        if location == "store":
+        if location == "merchant":
                 input("")
-        if location == "armoruy":
+        if location == "armourer":
                 input("")
         if location == "help":
-                input("Here you can explore and upgrade your utility within the local town. The blacksmith is for Upgrading weapons, store if for buying consumables, whilst armoury is for buying new weapons of higher tier") 
-                
+                input("Here you can explore and upgrade your utility within the local town.\nThe blacksmith is for upgrading weapons,\nthe store if for buying consumables\nand the armourer is for Upgrading weapons.")
 
 TitleScreen()
 username = ""
@@ -113,7 +112,7 @@ if savedata[0] == "2":
 if savedata[0] == "3":
 	playerclass = "Alchemist"
 	winsound.PlaySound("Sounds/spell.wav", winsound.SND_ASYNC)
-print("Welcome "+ username+ "... My finest "+ playerclass+ "!\nIf you need a list of commands try typing ""Help"" at any point.\n")
+print("Welcome "+ username+ "... My finest "+ playerclass+ "!\nIf you need a list of commands, type \"help\" at any point.\n")
 
 Lobby()
 
