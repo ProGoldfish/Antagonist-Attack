@@ -28,7 +28,7 @@ def Read(username):
 
 username = ""
 while len(username) < 1 or len(username) > 8 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
-	username = input("Enter your username:\n(no numbers or spaces - usernames are not case sensitive)\n> ").capitalize()
+	username = input("Enter your username: (no numbers or spaces - usernames are not case sensitive)\n> ").capitalize()
 
 Read(username)
 #Save(username, seed, savedata, playerhp) #EXAMPLE OF HOW TO SAVE
