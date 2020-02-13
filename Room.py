@@ -5,6 +5,7 @@ class Room():
 		self.linked_rooms = {}
 		self.character = None
 		self.item = None
+	
 	def set_character(self, new_character):
 		self.character = new_character
 
