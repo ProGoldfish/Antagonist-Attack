@@ -112,17 +112,20 @@ def Town():
             NewPage()
             if location == "blacksmith":
                     location = ""
-                    input("blacksmith\n >")
+                    input("blacksmith\n >") #robby
+
                     Save()
                     NewPage()
             if location == "merchant":
                     location = ""
-                    input("merchant\n >")
+                    input("merchant\n >") #robby
+
                     Save()
                     NewPage()
             if location == "armourer":
                     location = ""
-                    input("armourer\n >")
+                    input("armourer\n >") #robby
+
                     Save()
                     NewPage()
             if location == "help":
@@ -154,7 +157,7 @@ def Dungeon():
     global playerclass
     Save()
     NewPage()
-    input("dungeon\n> ") #robby put the dungeon code here pls. you may have to global all the stat variables
+    input("dungeon\n> ") #robby. you may have to global all the stat variables
 
     Menu()
 
