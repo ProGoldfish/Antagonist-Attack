@@ -221,7 +221,7 @@ if savedata[0] == "3":
 
 NewPage()
 print("\nWelcome "+ username+ "... My finest "+ playerclass+ "!")
-playerinput = input("If you need a list of commands, type \"help\" at any point.\n(enter to continue)\n> ").lower()
+playerinput = input("If you need more information, type \"help\" at any point.\n(enter to continue)\n> ").lower()
 if playerinput == "help":
     NewPage()
     playerinput = ""
