@@ -106,39 +106,46 @@ def TitleScreen():
     time.sleep(0.05)
 
 def Town():
-    global playerclass
     global username
+    global seed
+    global savedata
+    global playerclass
+    global maxhp
+    global playerhp
+    global attackmax
+    global attackmin
+    global armour
     Save()
     NewPage()
-    location = ""
+    playerinput = ""
     print("You are welcomed back into the humbling town.\nThe towns workers are greeting you with wonderful smiles.\n")
-    while location != "leave":
-        while location not in ["blacksmith","merchant","armourer","help","leave"]:
-            location = input("The \"blacksmith\", \"merchant\" and \"armourer\" are here. (type \"leave\" to leave)\n> ").lower()
+    while playerinput != "leave":
+        while playerinput not in ["blacksmith","merchant","armourer","help","leave"]:
+            playerinput = input("The \"blacksmith\", \"merchant\" and \"armourer\" are here. (type \"leave\" to leave)\n> ").lower()
             NewPage()
-            if location == "blacksmith":
-                    location = ""
+            if playerinput == "blacksmith":
                     Sound("smithy")
-                    input("blacksmith\n> ") #robby
+                    playerinput = ""
+                    playerinput = input("blacksmith\n> ") #robby
 
                     Save()
                     NewPage()
-            if location == "merchant":
-                    location = ""
+            if playerinput == "merchant":
                     Sound("mark")
-                    input("merchant\n> ") #robby
+                    playerinput = ""
+                    playerinput = input("merchant\n> ") #robby
 
                     Save()
                     NewPage()
-            if location == "armourer":
-                    location = ""
+            if playerinput == "armourer":
                     Sound("roary")
-                    input("armourer\n> ") #robby
+                    playerinput = ""
+                    playerinput = input("armourer\n> ") #robby
 
                     Save()
                     NewPage()
-            if location == "help":
-                    location = ""
+            if playerinput == "help":
+                    playerinput = ""
                     input("\nHere you can explore and upgrade your utility within the local town.\n\nThe blacksmith is for upgrading weapons.\nThe store if for buying consumables.\nThe armourer is for Upgrading weapons.\n(enter to continue)\n> ")
                     NewPage()
     Menu()
@@ -147,7 +154,7 @@ def Menu():
     Save()
     Sound("walk")
     playerinput = ""
-    while playerinput not in ["dungeon","town","quit"]:
+    while playerinput not in ["dungeon","town","quit","help"]:
         NewPage()
         playerinput = input("What would you like to do now my mighty "+ playerclass+ "?\n(a \"dungeon\", back to the \"town\" or \"quit\" the game)\n> ").lower()
     if playerinput == "dungeon":
@@ -160,6 +167,11 @@ def Menu():
         Town()
     if playerinput == "quit":
         playerinput = ""
+    if playerinput == "help":
+    	playerinput = ""
+    	NewPage()
+    	input("This is the menu.\n\nThe menu is where you choose where to take your awesome adventure.\nThere are a wide range of choices such as:\n - Dungeons.\n - The Town.\n - Quitting the game.\n\n(I don't see a reason for the last one but its here just incase.)\n(enter to continue)\n> ")
+    	Menu()
 
 def Dungeon():
     global username
@@ -173,7 +185,8 @@ def Dungeon():
     global armour
     Save()
     NewPage()
-    input("dungeon\n> ") #robby
+    playerinput = ""
+    playerinput = input("dungeon\n> ") #robby
 
     Menu()
 
