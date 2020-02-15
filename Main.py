@@ -146,7 +146,7 @@ def Town():
                     NewPage()
             if playerinput == "help":
                     playerinput = ""
-                    input("\nHere you can explore and upgrade your utility within the local town.\n\nThe blacksmith is for upgrading weapons.\nThe store if for buying consumables.\nThe armourer is for Upgrading weapons.\n(enter to continue)\n> ")
+                    input("\nHere you can explore and upgrade your utility within the local town.\n\nThe blacksmith is for buying weapons/armour.\nThe merchant if for buying items and consumables.\nThe armourer is for upgrading weapons/armour.\n(enter to continue)\n> ")
                     NewPage()
     Menu()
 
@@ -170,7 +170,7 @@ def Menu():
     if playerinput == "help":
     	playerinput = ""
     	NewPage()
-    	input("This is the menu.\n\nThe menu is where you choose where to take your awesome adventure.\nThere are a wide range of choices such as:\n - Dungeons.\n - The Town.\n - Quitting the game.\n\n(I don't see a reason for the last one but its here just incase.)\n(enter to continue)\n> ")
+    	input("This is the menu.\n\nThe menu is where you choose where to take your awesome adventure.\nThere are a wide range of choices such as:\n - Dungeons.\n - The town.\n - Quitting the game.\n\n(I don't see a reason for the last one but its here just incase.)\n(enter to continue)\n> ")
     	Menu()
 
 def Dungeon():
