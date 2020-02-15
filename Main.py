@@ -170,7 +170,7 @@ def Menu():
     if playerinput == "help":
     	playerinput = ""
     	NewPage()
-    	input("This is the menu.\n\nThe menu is where you choose where to take your awesome adventure.\nThere are a wide range of choices such as:\n - Dungeons.\n - The town.\n - Quitting the game.\n\n(I don't see a reason for the last one but its here just incase.)\n(enter to continue)\n> ")
+    	input("This is the menu.\n\nThe menu is where you choose where to take your awesome adventure.\nThere are a wide range of choices such as:\n - Dungeons.\n - The town.\n - Quitting the game.\n\n(I don't see a reason for the last one but it's there just incase.)\n(enter to continue)\n> ")
     	Menu()
 
 def Dungeon():
