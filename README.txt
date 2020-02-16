@@ -8,4 +8,7 @@ team jake and co. members:
 	Robby, programs and relentlessly breaks code
 	Ethan, he comes up with slogans
 
+team jake and co. official trailer:
+	https://www.youtube.com/watch?v=66N3O06ghy4
+
 Run "Antagonist Attack.py" to start!
