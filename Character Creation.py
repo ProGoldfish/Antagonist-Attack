@@ -18,9 +18,11 @@ while done == "n":
     NewPage()
     while len(username) < 1 or len(username) > 15 or any(ext in username for ext in ["0","1","2","3","4","5","6","7","8","9"," "]):
         username = input("Please enter a username that you will remember: (no numbers or spaces - usernames are not case sensitive)\n> ").capitalize()
+    NewPage()
 
     while savedata[0] not in ["1","2","3"]:
         savedata[0] = input("\nChoose a class:\nArcher (1)\nWarrior (2)\nAlchemist (3)\n> ")
+    NewPage()
     if savedata[0] == "1":
         playerhp = 100
         print("\nYou have chosen Archer!\n\nA ranger able to make full use of the long range weapons.\nYou shoot down your enemies but be careful not to get hit!\n\nHealth: 100\nMaximum Damage: 25\nMinimum Damage: 20\nArmour: 1") 
