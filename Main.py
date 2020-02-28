@@ -126,21 +126,21 @@ def Town():
             if playerinput == "blacksmith":
                     Sound("smithy")
                     playerinput = ""
-                    playerinput = input("blacksmith\n> ") #robby
+                    playerinput = input("The blacksmith tells you to go away.\n> ") #robby
 
                     Save()
                     NewPage()
             if playerinput == "merchant":
                     Sound("mark")
                     playerinput = ""
-                    playerinput = input("merchant\n> ") #robby
+                    playerinput = input("The merchant tells you to go away.\n> ") #robby
 
                     Save()
                     NewPage()
             if playerinput == "armourer":
                     Sound("roary")
                     playerinput = ""
-                    playerinput = input("armourer\n> ") #robby
+                    playerinput = input("The armourer tells you to go away.\n> ") #robby
 
                     Save()
                     NewPage()
@@ -160,7 +160,8 @@ def Menu():
     if playerinput == "dungeon":
         playerinput = ""
         Sound("walk")
-        Dungeon()
+        NewPage()
+        input("On your way to the dungeon you trip and die.\nGame over.\n> ")
     if playerinput == "town":
         playerinput = ""
         Sound("walk")
